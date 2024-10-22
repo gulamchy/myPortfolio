@@ -1,10 +1,10 @@
 
-import image1 from '../assets/myImages/image1.png';
-import image2 from '../assets/myImages/image2.png';
-import image3 from '../assets/myImages/image3.png';
-import image4 from '../assets/myImages/image4.png';
-import image5 from '../assets/myImages/image5.png';
-import image6 from '../assets/myImages/image6.png';
+import image1 from '../assets/myImages/Image1.png';
+import image2 from '../assets/myImages/Image2.png';
+import image3 from '../assets/myImages/Image3.png';
+import image4 from '../assets/myImages/Image4.png';
+import image5 from '../assets/myImages/Image5.png';
+import image6 from '../assets/myImages/Image6.png';
 
 export const imageModel = [
     { image: image1 },

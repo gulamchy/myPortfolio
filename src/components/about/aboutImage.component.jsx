@@ -10,8 +10,8 @@ import { imageModel } from '../../models/imageModel';
 // import image5 from '../../assets/myImages/image5.png';
 // import image6 from '../../assets/myImages/image6.png';
 
-// import image1 from '/image1.png';
-// import image2 from '/image2.png';
+// import image2 from '/Image1.png';
+// import image2 from '/Image2.png';
 // import image3 from '/image3.png';
 // import image4 from '/image4.png';
 // import image5 from '/image5.png';
@@ -33,17 +33,7 @@ const AboutImage = () => {
   const [cursorVelocity, setCursorVelocity] = useState({ x: 0, y: 0 });
   // const imgUrl = gsap.utils.random([image1, image2, image3, image4, image5, image6], true);
   const imgUrl = gsap.utils.random(imageModel.map(img => img.image), true);
-  // const imgUrl = gsap.utils.random(
-  //   [
-  //     "/image1.png",
-  //     "/image2.png",
-  //     "/image3.png",
-  //     "/image4.png",
-  //     "/image5.png",
-  //     "/image6.png"
-  //   ],
-  //   true
-  // );
+
   
   
 
