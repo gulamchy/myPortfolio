@@ -28,7 +28,7 @@ const AboutText = () => {
                         trigger: el, 
                         scroller: containerRef.current,
                         start: "top top", 
-                        end: "bottom bottom", 
+                        end: "bottom 100%", 
                         scrub: true, 
                         markers: false,
                         toggleActions: "play none none reverse", 

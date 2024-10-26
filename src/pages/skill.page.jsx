@@ -89,7 +89,7 @@ const Skill = () => {
                       <img 
                         src={skill.img} 
                         alt={skill.title} 
-                        className="w-full sm:w-[20.833vw] h-auto sm:h-[27.778vw]" 
+                        className="w-full sm:w-[20.833vw] h-[57.143vw] sm:h-[27.778vw] object-cover" 
                         ref={(el) => (imgRefs.current[index] = el)}
                       />
                     </div>
