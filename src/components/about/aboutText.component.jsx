@@ -2,8 +2,8 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { AboutTextModel } from "../../models/aboutText";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +13,7 @@ const AboutText = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
+
         textRef.current.forEach((el) => {
             const splitText = new SplitType(el, { types: "words" });
 
@@ -27,10 +28,10 @@ const AboutText = () => {
                         trigger: el, 
                         scroller: containerRef.current,
                         start: "top top", 
-                        end: "bottom 100%", 
+                        end: "bottom bottom", 
                         scrub: true, 
-                        toggleActions: "play none none reverse", 
                         markers: false,
+                        toggleActions: "play none none reverse", 
                     },
                 },
             );
@@ -49,12 +50,13 @@ const AboutText = () => {
     return(
         <div 
             ref={containerRef}
-            className="overflow-hidden h-full overflow-y-scroll no-scrollbar overflow-auto"
+            className="h-full overflow-y-scroll no-scrollbar overflow-auto"
+            data-lenis-prevent
         >
             {AboutTextModel.map((aboutText, index) => (
                 <div 
                     key={`container-${index}`}
-                    className="overflow-hidden flex"
+                    className="flex"
                 >
                     <p 
                         ref={(el) => (textRef.current[index] = el)} 

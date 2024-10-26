@@ -69,5 +69,4 @@ export const skillModel = [
         ],
         "link": "#"
     },
-      
 ]

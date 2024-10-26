@@ -3,27 +3,6 @@ import { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { imageModel } from '../../models/imageModel';
 
-// import image1 from '../../assets/myImages/image1.png';
-// import image2 from '../../assets/myImages/image2.png';
-// import image3 from '../../assets/myImages/image3.png';
-// import image4 from '../../assets/myImages/image4.png';
-// import image5 from '../../assets/myImages/image5.png';
-// import image6 from '../../assets/myImages/image6.png';
-
-// import image2 from '/Image1.png';
-// import image2 from '/Image2.png';
-// import image3 from '/image3.png';
-// import image4 from '/image4.png';
-// import image5 from '/image5.png';
-// import image6 from '/image6.png';
-
-// const image1 = require('../../assets/myImages/image1.png').default;
-// const image2 = require('../../assets/myImages/image2.png').default;
-// const image3 = require('../../assets/myImages/image3.png').default;
-// const image4 = require('../../assets/myImages/image4.png').default;
-// const image5 = require('../../assets/myImages/image5.png').default;
-// const image6 = require('../../assets/myImages/image6.png').default;
-
 
 const AboutImage = () => {
   const sectionRef = useRef(null); // Section reference
@@ -155,6 +134,7 @@ const AboutImage = () => {
       className="relative h-[20vw] w-full" 
     >
       {/* The images will appear inside this div */}
+      <p className="opacity-30 text-white text-[2.5vw] sm:text-[0.833vw] flex items-center justify-center">Move over to surprise</p>
     </div>
   );
 };

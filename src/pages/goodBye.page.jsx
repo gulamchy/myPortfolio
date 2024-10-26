@@ -30,7 +30,7 @@ const GoodBye = () => {
         const interval = setInterval(() => {
           const nextIndex = (activeIndex + 1) % goodByeModel.length;
           setActiveIndex(nextIndex);
-        }, 5000);
+        }, 3500);
     
         return () => {
           clearInterval(interval)
@@ -42,7 +42,7 @@ const GoodBye = () => {
       }, [activeIndex]);
 
     return(
-        <div className="flex flex-col items-center h-screen w-full bg-dark py-[5vw]">
+        <div className="flex flex-col items-center min-h-screen w-full bg-dark py-[20vw] sm:py-[10vw]">
             <div className="h-[15vw] sm:h-[7vw] flex items-start overflow-hidden">
                 {goodByeModel.map((byeText, index)=>(
                     <h1 
@@ -55,7 +55,7 @@ const GoodBye = () => {
                 ))}
             </div>
             <div className="flex flex-col flex-grow items-center justify-end w-[80vw]">
-                <p className="text-white text-center text-[3vw] sm:text-[1.389vw] opacity-80 font-anton uppercase w-[60vw] sm:w-[31.25vw] mb-6">Feel free to drop me a line. It would be a pleasure to help you with your inquiry!</p>
+                <p className="text-white text-center text-[3.429vw] sm:text-[1.667vw] text-opacity-80 font-anton uppercase w-[60vw] sm:w-[31.25vw] mb-6">Feel free to drop me a line. It would be a pleasure to help you with your inquiry!</p>
                 <div className="w-full h-[0.3vw] sm:h-[0.15vw] bg-white mb- opacity-50"></div>
                 <h1 className="text-center text-white font-anton font-extrabold text-[7vw] sm:text-[5vw] m-3"> <a href="mailto:example@example.com">gulamsulaman@gmail.com</a></h1>
                 <div className="w-full h-[0.3vw] sm:h-[0.15vw] bg-white mb-6 opacity-50"></div>

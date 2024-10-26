@@ -40,38 +40,14 @@ export default function TestimonialText() {
     );
   };
 
-  // const scrollIntoView = (index) => {
-  //   const section = sectionRef.current;
-  //   const button = buttonRefs.current[index];
-
-  //   // Check if the section is in view
-  //   if (section && button) {
-  //     const sectionRect = section.getBoundingClientRect();
-  //     const buttonRect = button.getBoundingClientRect();
-
-  //     if (
-  //       buttonRect.top > sectionRect.top ||
-  //       buttonRect.bottom < sectionRect.bottom
-  //     ) {
-  //       button.scrollIntoView({
-  //         behavior: "smooth",
-  //         inline: "nearest",
-  //       });
-  //     }
-  //   }
-  // }
-
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (activeIndex + 1) % testimonials.length;
       setActiveIndex(nextIndex);
-      // if (buttonRefs.current[nextIndex]){
-      //   scrollIntoView(nextIndex);
-      // }
     }, 5000);
 
     return () => {
-      clearInterval(interval)
+      clearInterval(interval);
     };
   }, [activeIndex]);
 
@@ -79,13 +55,9 @@ export default function TestimonialText() {
     animateText(activeIndex);
   }, [activeIndex]);
 
-
   const handleButtonClick = (index) => {
     setActiveIndex(index);
     animateText(index);
-    // if (buttonRefs.current[index]){
-    //   scrollIntoView(index);
-    // }
   };
 
   return (
@@ -98,7 +70,7 @@ export default function TestimonialText() {
           <div
             key={testimonial.id}
             ref={(el) => (textRefs.current[index] = el)}
-            className={`overflow-hidden uppercase text-[6vw] sm:text-[3.5vw] text-center font-anton top-0 transition-opacity duration-500 h-[85.25vw] sm:h-[27vw] ${
+            className={`overflow-hidden uppercase text-[6vw] sm:text-[3.5vw] text-center font-anton top-0 transition-opacity duration-500 h-[85.25vw] sm:h-[27vw] py-4 ${
               activeIndex === index ? "block" : "hidden"
             }`}
           >
@@ -113,7 +85,7 @@ export default function TestimonialText() {
           <button
             key={testimonial.id}
             ref={(el) => (buttonRefs.current[index] = el)}
-            className={`transition-all ease-in-out inline-block px-4 py-2 rounded transition duration-200 font-syne uppercase font-bold flex items-center gap-4 text-start ${
+            className={`transition-all ease-in-out inline-block px-4 py-2 rounded transition duration-200 font-syne font-bold flex items-center gap-4 text-start ${
               activeIndex === index ? "text-dark" : "text-white"
             }`}
             onClick={() => handleButtonClick(index)}
@@ -125,10 +97,12 @@ export default function TestimonialText() {
                   : "border rounded-full"
               }`}
             ></div>
-            <div>
+            <div className="uppercase">
               {testimonial.firstName}
               <br />
               {testimonial.lastName}
+              <br />
+              <div className="normal-case font-medium text-[2.917vw] sm:text-[0.972vw] text-dark opacity-30">{testimonial.relation}</div>
             </div>
           </button>
         ))}

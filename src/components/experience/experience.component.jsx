@@ -88,41 +88,42 @@ const ExperienceComponent = () => {
             {experienceModel.map((experience, index) => (
                 <div 
                     key={index} 
-                    className="w-[80vw] border-b border-white border-opacity-30 min-h-[8.333vw] flex items-start justify-between py-4 my-8 cursor-pointer"
-                    ref={(el) => (expRef.current[index] = el)} // Reference for the experience container
+                    className="w-[80vw] border-b border-white border-opacity-30 min-h-[8.333vw] flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-between py-4 my-8 cursor-pointer"
+                    // className="w-[80vw] border-b border-white border-opacity-30 min-h-[8.333vw] flex items-start justify-between py-4 my-8 cursor-pointer"
+                    ref={(el) => (expRef.current[index] = el)}
                     onClick={() => handleJobClick(index)}
                 >
                     {index % 2 === 0 ? (
                         <>
-                            <img src={experience.logo} alt="logo" className="w-[5.278vw]" />
-                            <div className="flex flex-col justify-end gap-2">
-                                <div className="flex items-center gap-4 justify-end">
-                                    <p 
-                                        className="font-syne text-white text-right opacity-70 uppercase font-bold"
-                                        ref={(el) => (textRefs.current[index] = [el, textRefs.current[index]?.[1], textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[0]} // Date ref
+                            <img src={experience.logo} alt="logo" className="w-[12vw] sm:w-[5.833vw] mb-4" />
+                            <div className="flex flex-col justify-center sm:justify-end gap-2">
+                                <div className="flex items-center gap-4 justify-center sm:justify-end">
+                                    <p
+                                        className="font-syne text-white text-center sm:text-right text-opacity-70 uppercase font-bold text-[2.917vw] sm:text-[0.972vw]"
+                                        ref={(el) => (textRefs.current[index] = [el, textRefs.current[index]?.[1], textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[0]} 
                                     >
                                         {experience.date}
                                     </p>
-                                    <p className="font-syne text-white text-right opacity-70 uppercase font-bold">||</p>
+                                    <p className="font-syne text-white text-center sm:text-right text-opacity-70 uppercase font-bold text-[2.917vw] sm:text-[0.972vw]">||</p>
                                     <p 
-                                        className="font-syne text-white text-right opacity-70 uppercase font-bold"
-                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], el, textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[1]} // Employer ref
+                                        className="font-syne text-white uppercase font-bold text-center sm:text-right text-opacity-70  text-[2.917vw] sm:text-[0.972vw]"
+                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], el, textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[1]}
                                     >
                                         {experience.employer}
                                     </p>
                                 </div>
 
                                 <div className="h-[0.1vw] w-[5vw] ml-auto opacity-30"></div>
-                                <div className="flex flex-col justify-end">
+                                <div className="flex flex-col justify-center sm:justify-end">
                                     <h4 
-                                        className="uppercase font-anton text-white text-[2.222vw] text-right"
-                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], el, textRefs.current[index]?.[3]])[2]} // Title ref
+                                        className="uppercase font-anton text-white text-[6vw] sm:text-[2.222vw] text-center sm:text-right"
+                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], el, textRefs.current[index]?.[3]])[2]}
                                     >
                                         {experience.title}
                                     </h4>
                                     <p 
-                                        className="font-syne text-white text-right font-bold"
-                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], textRefs.current[index]?.[2], el])[3]} // Subtitle ref
+                                        className="font-syne font-bold  text-white text-center sm:text-right text-[2.917vw] sm:text-[0.972vw] text-opacity-70"
+                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], textRefs.current[index]?.[2], el])[3]}
                                     >
                                         {experience.subtitle}
                                     </p>
@@ -130,14 +131,14 @@ const ExperienceComponent = () => {
 
                                 {expandedIndex === index && (
                                     <div 
-                                        className="mt-4 p-4 flex items-end"
+                                        className="mt-4 p-4 flex items-center sm:items-end"
                                         ref={(el) => (detailsRef.current[index] = el)} 
                                     >
-                                        <ul className="text-left text-[1vw] text-white">
+                                        <ul>
                                             {experience.details.map((detail, idx) => (
-                                                <li key={idx} className="flex items-center gap-[1.111vw] justify-end">
-                                                    <span className="text-white text-[1.667vw] font-syne font-semibold mb-2 opacity-80 ">{detail}</span>
-                                                    <div className="w-[1.111vw] h-[1.111vw] bg-white opacity-30"></div>
+                                                <li key={idx} className="flex items-center gap-[1.111vw] justify-center sm:justify-end">
+                                                    <span className="text-white text-[3.429vw] sm:text-[1.389vw] text-center sm:text-right font-syne font-semibold mb-2 text-opacity-90">{detail}</span>
+                                                    <div className="w-[1.111vw] h-[1.111vw] bg-white opacity-30 invisible sm:visible"></div>
                                                 </li>
                                             ))}
                                         </ul>
@@ -147,54 +148,54 @@ const ExperienceComponent = () => {
                         </>
                     ) : (
                         <>
-                            <div className="flex flex-col justify-start gap-2">
-                                <div className="flex items-center gap-4">
-                                    <p 
-                                        className="font-syne text-white text-left opacity-70 uppercase font-bold"
-                                        ref={(el) => (textRefs.current[index] = [el, textRefs.current[index]?.[1], textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[0]} // Employer ref
-                                    >
-                                        {experience.employer}
-                                    </p>
-                                    <p className="font-syne text-white text-left opacity-70 uppercase font-bold">||</p>
-                                    <p 
-                                        className="font-syne text-white text-left opacity-70 uppercase font-bold"
-                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], el, textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[1]} // Date ref
-                                    >
-                                        {experience.date}
-                                    </p>
-                                </div>
-                                <div className="h-[0.1vw] w-[5vw] mr-auto opacity-30"></div>
-                                <div className="flex flex-col justify-start">
-                                    <h4 
-                                        className="uppercase font-anton text-white text-[2.222vw] text-left"
-                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], el, textRefs.current[index]?.[3]])[2]} // Title ref
-                                    >
-                                        {experience.title}
-                                    </h4>
-                                    <p 
-                                        className="font-syne text-white text-left font-bold"
-                                        ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], textRefs.current[index]?.[2], el])[3]} // Subtitle ref
-                                    >
-                                        {experience.subtitle}
-                                    </p>
-                                </div>
-                                {expandedIndex === index && (
-                                    <div 
-                                        className="mt-4 p-4"
-                                        ref={(el) => (detailsRef.current[index] = el)} // Reference for the details (expanded text)
-                                    >
-                                        <ul className="text-left text-[1vw] text-white">
-                                            {experience.details.map((detail, idx) => (
-                                                <li key={idx} className="flex items-center gap-[1.111vw]">
-                                                    <div className="w-[1.111vw] h-[1.111vw] bg-gray"></div>
-                                                    <span className="text-white text-[1.667vw] font-anton mb-2">{detail}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                <div className="flex flex-col justify-start gap-2 order-2 sm:order-1">
+                                    <div className="flex items-center gap-4 justify-center sm:justify-start">
+                                        <p 
+                                            className="font-syne text-white uppercase font-bold text-center sm:text-left text-opacity-70  text-[2.917vw] sm:text-[0.972vw]"
+                                            ref={(el) => (textRefs.current[index] = [el, textRefs.current[index]?.[1], textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[0]}
+                                        >
+                                            {experience.employer}
+                                        </p>
+                                        <p className="font-syne text-white uppercase font-bold text-center sm:text-left text-opacity-70  text-[2.917vw] sm:text-[0.972vw]">||</p>
+                                        <p 
+                                            className="font-syne text-white uppercase font-bold text-center sm:text-left text-opacity-70  text-[2.917vw] sm:text-[0.972vw]"
+                                            ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], el, textRefs.current[index]?.[2], textRefs.current[index]?.[3]])[1]}
+                                        >
+                                            {experience.date}
+                                        </p>
                                     </div>
-                                )}
-                            </div>
-                            <img src={experience.logo} alt="logo" className="w-[5.278vw]" />
+                                    <div className="h-[0.1vw] w-[5vw] mr-auto opacity-30"></div>
+                                    <div className="flex flex-col justify-center sm:justify-start">
+                                        <h4 
+                                            className="uppercase font-anton text-white text-[6vw] sm:text-[2.222vw] text-center sm:text-left"
+                                            ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], el, textRefs.current[index]?.[3]])[2]}
+                                        >
+                                            {experience.title}
+                                        </h4>
+                                        <p 
+                                            className="font-syne text-white font-bold text-center sm:text-left  text-[2.917vw] sm:text-[0.972vw] text-opacity-70"
+                                            ref={(el) => (textRefs.current[index] = [textRefs.current[index]?.[0], textRefs.current[index]?.[1], textRefs.current[index]?.[2], el])[3]}
+                                        >
+                                            {experience.subtitle}
+                                        </p>
+                                    </div>
+                                    {expandedIndex === index && (
+                                        <div 
+                                            className="mt-4 p-4 flex items-center sm:items-start"
+                                            ref={(el) => (detailsRef.current[index] = el)} 
+                                        >
+                                            <ul >
+                                                {experience.details.map((detail, idx) => (
+                                                    <li key={idx} className="flex items-center gap-[1.111vw] justify-center sm:justify-start">
+                                                        <div className="w-[1.111vw] h-[1.111vw] bg-white opacity-30 invisible sm:visible"></div>
+                                                        <span className="text-white text-[3.429vw] sm:text-[1.389vw] text-center sm:text-left font-syne font-semibold mb-2 text-opacity-90">{detail}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>
+                                <img src={experience.logo} alt="logo" className="mb-4 w-[10.938vw] sm:w-[5.833vw] order-1 sm:order-2" />
                         </>
                     )}
                 </div>

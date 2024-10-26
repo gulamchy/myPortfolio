@@ -7,7 +7,7 @@ export const experienceModel = [
         "logo": logo1,
         "title": "Graduate Teaching Assistant",
         "employer": "WWU",
-        "date": "November, 2023 - Present",
+        "date": "Nov, 2023 - Present",
         "subtitle": "CSCI405 - Advanced Data Structure and Algorithm, CSCI477 - Data Mining",
         "details": [
             "Developed responsive web applications using React.js",
@@ -22,7 +22,7 @@ export const experienceModel = [
         "logo": logo2,
         "title": "Machine Learning Research Assistant",
         "employer": "KIND Lab",
-        "date": "March, 2024 - Present",
+        "date": "Mar, 2024 - Present",
         "subtitle": "CSCI405 - Advanced Data Structure and Algorithm, CSCI477 - Data Mining",
         "details": [
             "Developed responsive web applications using React.js",
@@ -37,7 +37,7 @@ export const experienceModel = [
         "logo": logo3,
         "title": "Lead UI/UX Designer",
         "employer": "Datacube.io",
-        "date": "April, 2021 - August, 2023",
+        "date": "Apr, 2021 - Aug, 2023",
         "subtitle": "CSCI405 - Advanced Data Structure and Algorithm, CSCI477 - Data Mining",
         "details": [
             "Developed responsive web applications using React.js",
