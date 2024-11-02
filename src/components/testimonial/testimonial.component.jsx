@@ -80,7 +80,7 @@ export default function TestimonialText() {
       </div>
 
       <div className="w-full h-[0.5vw] sm:h-[0.15vw] bg-white mb-6"></div>
-      <div className="flex items-center space-x-4 mb-6 overflow-x-auto no-scrollbar whitespace-nowrap inline-block">
+      <div className="flex items-center justify-center space-x-4 mb-6 overflow-x-auto no-scrollbar whitespace-nowrap inline-block">
         {testimonials.map((testimonial, index) => (
           <button
             key={testimonial.id}

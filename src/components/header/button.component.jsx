@@ -39,7 +39,7 @@ export default function Button({ children, href, onClick, className = '', ...pro
         <button 
             ref={buttonsRef} 
             onClick={onClick} 
-            className={`px-4 sm:px-8 transition-all border border-dark border-opacity-25 py-[1.111vw] sm:py-[1.667vw] rounded-full h-11 font-syne font-semibold text-[3.333vw] md:text-[1.667vw] lg:text-[1.111vw] ${className}`}
+            className={`px-4 sm:px-8 transition-all border border-dark border-opacity-25 hover:border-none hover:bg-dark hover:text-white py-[1.111vw] sm:py-[1.667vw] rounded-full h-11 font-syne font-semibold text-[3.333vw] md:text-[1.667vw] lg:text-[1.111vw] ${className}`}
             {...props}
         >
             {children}

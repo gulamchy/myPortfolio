@@ -101,7 +101,7 @@ export default function MiddleText() {
                 </div>
 
                 <div className="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="bg-dark overflow-x-auto no-scrollbar w-[90vw] sm:w-[80vw] h-[20vw] sm:h-[10.417vw] whitespace-nowrap inline-block flex items-center">
+                    <div className="bg-dark overflow-x-auto no-scrollbar w-[90vw] sm:w-[80vw] h-[18vw] sm:h-[8vw] whitespace-nowrap inline-block flex items-center">
                         <MovingContainer />
                         <MovingContainer />
                     </div>

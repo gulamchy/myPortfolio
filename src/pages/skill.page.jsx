@@ -85,11 +85,11 @@ const Skill = () => {
                     </ul>
                     </div>
 
-                    <div className="flex flex-col justify-start items-center object-cover overflow-hidden">
+                    <div className="flex flex-col justify-start items-center object-cover object-center overflow-hidden">
                       <img 
                         src={skill.img} 
                         alt={skill.title} 
-                        className="w-full sm:w-[20.833vw] h-[57.143vw] sm:h-[27.778vw] object-cover" 
+                        className="w-full sm:w-[20.833vw] h-[57.143vw] sm:h-[27.778vw] object-cover object-center" 
                         ref={(el) => (imgRefs.current[index] = el)}
                       />
                     </div>
@@ -101,7 +101,7 @@ const Skill = () => {
                         <span>|</span>
                         <p>{skill.projectDate}</p>
                     </div>
-                    <Button href={skill.link} className="ml-0 sm:ml-[2.778vw] mb-[5vw] sm:mb-[1.667vw] border border-dark border-opacity-25 opacity-70 hover:opacity-100 transition-all ease-in-out">
+                    <Button href={skill.link} className="ml-0 sm:ml-[2.778vw] mb-[5vw] sm:mb-[1.667vw] border border-dark border-opacity-25 opacity-70 hover:opacity-100 hover:bg-dark hover:text-white transition-all ease-in-out">
                         Check out
                     </Button>
                     <div>

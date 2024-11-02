@@ -182,12 +182,12 @@ const Footer = () => {
         >
             <div className="relative h-[calc(100vh+800px)] sm:h-[calc(100vh+1200px)] -top-[100vh]">
                 <div className="sticky top-[calc(100vh-800px)] sm:top-[calc(100vh-1200px)] h-[800px] sm:h-[1200px]">
-                    <div className="absolute flex flex-col items-center justify-center h-screen w-screen bg-dark">
+                    <div className="absolute flex flex-col items-center justify-center h-[800px] sm:h-[1200px] w-screen bg-dark">
                     </div>
 
                     <div
                         ref={overlayRef}
-                        className="sticky bottom-0 flex flex-col items-center justify-center h-screen w-screen bg-white"
+                        className="sticky bottom-0 flex flex-col items-center justify-center h-[800px] sm:h-[1200px] w-screen bg-white"
                         style={{
                             clipPath: `circle(30vw at var(--x, 50%) var(--y, 50%))`,
                             transition: 'clip-path 100ms',
@@ -196,11 +196,11 @@ const Footer = () => {
                         <div className="flex flex-col items-center justify-evenly rounded-full h-[65vw] sm:h-[50vw]  w-[65vw] sm:w-[50vw]">
                             <p className="text-dark text-center uppercase text-[2.5vw] sm:text-[1.667vw] font-anton w-[37vw] sm:w-[36vw]">I am so happy that you stopped by. I would love to hear from you. Feel free to reach out.</p>
                             <h3 className="font-syne font-extrabold text-dark text-[8vw] sm:text-[6.667vw]">Thanks</h3>
-                            <div className="flex justify-between items-center w-[38vw] border-t border-dark border-t-[.3vw] sm:border-t-[.15vw] py-[1.667vw]">
-                                <span className="text-[1.8vw] sm:text-[1.667vw] font-normal text-dark font-syne">
+                            <div className="flex justify-between items-center w-[38vw] border-t border-dark border-t-[.3vw] sm:border-t-[.15vw] py-[1.111vw]">
+                                <span className="text-[2.083vw] sm:text-[1.111vw] font-normal text-dark font-syne">
                                     Based in Seattle
                                 </span>
-                                <span className="text-[1.8vw] sm:text-[1.667vw] font-normal text-dark text-right font-syne">
+                                <span className="text-[2.083vw] sm:text-[1.111vw] font-normal text-dark text-right font-syne">
                                     All rights reserved © 2024
                                 </span>
                             </div>

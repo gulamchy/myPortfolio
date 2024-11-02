@@ -136,8 +136,8 @@ const ExperienceComponent = () => {
                                     >
                                         <ul>
                                             {experience.details.map((detail, idx) => (
-                                                <li key={idx} className="flex items-center gap-[1.111vw] justify-center sm:justify-end">
-                                                    <span className="text-white text-[3.429vw] sm:text-[1.389vw] text-center sm:text-right font-syne font-semibold mb-2 text-opacity-90">{detail}</span>
+                                                <li key={idx} className="flex items-center gap-[1.111vw] justify-center sm:justify-end pb-8">
+                                                    <span className="text-white text-[3.429vw] sm:text-[1.389vw] text-center sm:text-right font-syne font-semibold mb-2 text-opacity-90 w-full sm:w-[56vw]">{detail}</span>
                                                     <div className="w-[1.111vw] h-[1.111vw] bg-white opacity-30 invisible sm:visible"></div>
                                                 </li>
                                             ))}
@@ -188,7 +188,7 @@ const ExperienceComponent = () => {
                                                 {experience.details.map((detail, idx) => (
                                                     <li key={idx} className="flex items-center gap-[1.111vw] justify-center sm:justify-start">
                                                         <div className="w-[1.111vw] h-[1.111vw] bg-white opacity-30 invisible sm:visible"></div>
-                                                        <span className="text-white text-[3.429vw] sm:text-[1.389vw] text-center sm:text-left font-syne font-semibold mb-2 text-opacity-90">{detail}</span>
+                                                        <span className="text-white text-[3.429vw] sm:text-[1.389vw] text-center sm:text-left font-syne font-semibold mb-2 text-opacity-90 w-full sm:w-[56vw]">{detail}</span>
                                                     </li>
                                                 ))}
                                             </ul>
