@@ -186,7 +186,7 @@ const ExperienceComponent = () => {
                                         >
                                             <ul >
                                                 {experience.details.map((detail, idx) => (
-                                                    <li key={idx} className="flex items-center gap-[1.111vw] justify-center sm:justify-start">
+                                                    <li key={idx} className="flex items-center gap-[1.111vw] justify-center sm:justify-start pb-8">
                                                         <div className="w-[1.111vw] h-[1.111vw] bg-white opacity-30 invisible sm:visible"></div>
                                                         <span className="text-white text-[3.429vw] sm:text-[1.389vw] text-center sm:text-left font-syne font-semibold mb-2 text-opacity-90 w-full sm:w-[56vw]">{detail}</span>
                                                     </li>

@@ -196,7 +196,7 @@ const Footer = () => {
                         <div className="flex flex-col items-center justify-evenly rounded-full h-[65vw] sm:h-[50vw]  w-[65vw] sm:w-[50vw]">
                             <p className="text-dark text-center uppercase text-[2.5vw] sm:text-[1.667vw] font-anton w-[37vw] sm:w-[36vw]">I am so happy that you stopped by. I would love to hear from you. Feel free to reach out.</p>
                             <h3 className="font-syne font-extrabold text-dark text-[8vw] sm:text-[6.667vw]">Thanks</h3>
-                            <div className="flex justify-between items-center w-[38vw] border-t border-dark border-t-[.3vw] sm:border-t-[.15vw] py-[1.111vw]">
+                            <div className="flex justify-between items-center w-[38vw] border-t border-dark border-t-[.3vw] sm:border-t-[.15vw] py-[1.111vw] gap-4">
                                 <span className="text-[2.083vw] sm:text-[1.111vw] font-normal text-dark font-syne">
                                     Based in Seattle
                                 </span>
