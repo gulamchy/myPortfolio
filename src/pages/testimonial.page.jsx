@@ -17,6 +17,7 @@ const Testimonial = ()=> {
             <div className="mt-auto flex justify-center">
                 <Button href="mailto:gulamsulaman@gmail.com" className="bg-white font-syne font-bold">Send your good words</Button>
             </div>
+            <span className="text-white font-syne py-4 text-[1.714vw] sm:text-[0.833vw]">Include your name and profession please</span>
         </div>
         
     )
