@@ -39,7 +39,7 @@ export default function Header() {
             <div className="overflow-hidden" >
                 <div className="flex items-center gap-2">
                     <Button href="mailto:example@example.com">Email Me</Button>
-                    <Button href="https://drive.google.com/file/d/1uWyu-xufBILP66gvWliztsxPJNggPZUa/view?usp=share_link" className="border border-dark border-opacity-25 hover:bg-dark hover:text-white">My Resume</Button>
+                    <Button href="https://drive.google.com/file/d/11pvhPAnnrCnpnqLj7B0tuj8dm2AV7c4p/view?usp=share_link" className="border border-dark border-opacity-25 hover:bg-dark hover:text-white">My Resume</Button>
                 </div>
             </div>
         </div>
