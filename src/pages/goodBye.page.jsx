@@ -81,7 +81,7 @@ const GoodBye = () => {
             Linkedin
           </Button>
           <Button
-            href="https://drive.google.com/file/d/11pvhPAnnrCnpnqLj7B0tuj8dm2AV7c4p/view?usp=share_link"
+            href="https://drive.google.com/file/d/1ecfc1KdpvKSpZyztwU2Akjsa5MrKyKt3/view?usp=share_link"
             className="opacity-70 hover:opacity-100 transition-all ease-in-out"
           >
             Resume
